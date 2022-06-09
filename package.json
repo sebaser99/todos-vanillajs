@@ -1,4 +1,5 @@
 {
+  "homepage": "https://sebaser99.github.io/todos-vanillajs",
   "name": "todos-vjs",
   "version": "1.0.0",
   "description": "esta es una app para manejo de tareas por hacer",
@@ -6,6 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
+    "pre-deploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build:dev": "webpack --config webpack.config.js",
     "start": "webpack serve --config webpack.config.js"
   },
